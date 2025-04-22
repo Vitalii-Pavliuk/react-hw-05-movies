@@ -1,5 +1,17 @@
-/* .Link {
-    text-decoration: none;
-    color: black;
-    margin-right: 25px;
-  } */
+.nav {
+  background-color: #333;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navLink.active {
+  border-bottom: 2px solid #fff;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchPopularFilms } from '../servises/API';
 import Notiflix from "notiflix"
 import { Link } from 'react-router-dom';
+import styles from './Home.module.css';
 
 export const Home = () => {
   const [films, setFilms] = useState([]);
@@ -16,15 +17,15 @@ export const Home = () => {
   }, []);
 
   return (
-    <main>
-      <h1>HOME</h1>
+    <main className={styles.main}>
+      <h1 className={styles.heading}>Trending</h1>
 
-      <ul>
+      <ul className={styles.filmList}>
         {films.map(film => (
-          <li key={film.id}>
-          <Link to={`/movies/${film.id}`}>
-            {film.title || film.name}
-          </Link>
+          <li key={film.id} className={styles.filmItem}>
+            <Link to={`/movies/${film.id}`} className={styles.filmLink}>
+              {film.title || film.name}
+            </Link>
           </li>
         ))}
       </ul>

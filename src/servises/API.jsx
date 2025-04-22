@@ -39,3 +39,27 @@ export const fetchFilmByValue = async (searchValue) => {
   console.log(response.data);
   return response.data;
 }
+
+export const fetchCast = async (filmId) => {
+  const BASE_URL = `https://api.themoviedb.org/3/movie/${filmId}/credits`;
+  const response = await axios.get(BASE_URL, {
+    params: {
+      api_key: API_KEY,
+      language: 'en-US'
+    },
+  });
+  console.log(response.data);
+  return response.data;
+}
+
+export const fetchRewiews = async (filmId) => {
+  const BASE_URL = `https://api.themoviedb.org/3/movie/${filmId}/reviews`;
+  const response = await axios.get(BASE_URL, {
+    params: {
+      api_key: API_KEY,
+      language: 'en-US'
+    },
+  });
+  console.log(response.data);
+  return response.data;
+}

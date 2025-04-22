@@ -1,0 +1,36 @@
+.main {
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .filmList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  
+  .filmItem {
+    background: #f0f0f0;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .filmLink {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+  }
+  
+  .filmLink:hover {
+    color: #007BFF;
+  }
+  

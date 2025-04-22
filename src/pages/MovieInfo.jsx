@@ -1,14 +1,14 @@
 import MovieDetails from "components/MovieDetails/MovieDetails";
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../components/MovieDetails/MovieDetails.module.css"
 
 export const MovieInfo = () => {
 
   return (
     <main>
-      <h1>MOVIES</h1>
       <Link to={`/home`}>
-        <button type="button">Go back</button>
+        <button type="button" className={styles.backButton}>Go back</button>
       </Link>
     <MovieDetails />
     </main>
